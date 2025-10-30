@@ -1,0 +1,403 @@
+vim.cmd("highlight clear")
+vim.o.background = "dark"
+vim.g.colors_name = "halfdark"
+
+
+local palette = {
+    black = "#181a1f",
+    bg0 = "#282c34",
+    bg1 = "#31353f",
+    bg2 = "#393f4a",
+    bg3 = "#3b3f4c",
+    bg_d = "#21252b",
+    bg_blue = "#73b8f1",
+    bg_yellow = "#ebd09c",
+    fg = "#abb2bf",
+    purple = "#c678dd",
+    green = "#98c379",
+    orange = "#d19a66",
+    blue = "#61afef",
+    yellow = "#e5c07b",
+    cyan = "#56b6c2",
+    red = "#e86671",
+    grey = "#5c6370",
+    light_grey = "#848b98",
+    dark_cyan = "#2b6f77",
+    dark_red = "#993939",
+    dark_yellow = "#93691d",
+    dark_purple = "#8a3fa0",
+    diff_add = "#31392b",
+    diff_delete = "#382b2c",
+    diff_change = "#1c3448",
+    diff_text = "#2c5372",
+}
+
+-- terminal colors
+vim.g.terminal_color_0 = palette.black
+vim.g.terminal_color_1 = palette.red
+vim.g.terminal_color_2 = palette.green
+vim.g.terminal_color_3 = palette.yellow
+vim.g.terminal_color_4 = palette.blue
+vim.g.terminal_color_5 = palette.purple
+vim.g.terminal_color_6 = palette.cyan
+vim.g.terminal_color_7 = palette.fg
+vim.g.terminal_color_8 = palette.grey
+vim.g.terminal_color_9 = palette.red
+vim.g.terminal_color_10 = palette.green
+vim.g.terminal_color_11 = palette.yellow
+vim.g.terminal_color_12 = palette.blue
+vim.g.terminal_color_13 = palette.purple
+vim.g.terminal_color_14 = palette.cyan
+vim.g.terminal_color_15 = palette.fg
+
+
+local bg = palette.bg0
+local fg = palette.fg
+local punct_fg = palette.grey
+local def_fg = palette.blue
+local const_fg = palette.green
+local active = "#cd974b"
+local string_fg = palette.green
+local darker_fg = "#7d7d7d"
+local diffadd = "#6abf40"
+local diffdelete = "#d2322d"
+local diffchange = "#ec8013"
+local statusline = "#162022"
+local comment = palette.grey
+local dim_comment = "#696969"
+local mistake = {
+    fg = "#c33c33",
+    bg = "#2b1d1e",
+}
+local error = "#d13e23"
+local warn = "#f4b371"
+local hint = "#8ebeec"
+local info = "#88cc66"
+local comment_fg = vim.g.alabaster_dim_comments and dim_comment or comment
+local comment_bg = palette.bg_d
+local pmenu_bg = "#182325"
+local float_bg = vim.g.alabaster_floatborder and bg or pmenu_bg
+local floatborder = vim.g.alabaster_floatborder and { bg = bg, fg = "#333333" }
+    or {
+        bg = float_bg,
+        fg = float_bg,
+    }
+local theme = {
+    Comment = { fg = comment_fg, bg = comment_bg },
+    ColorColumn = { bg = palette.bg1 },
+    Conceal = { fg = "#b0b0b0" },
+    Cursor = { bg = active, fg = "#000000" },
+    -- lCursor      { }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    -- CursorIM     { }, -- like Cursor, but used when in IME mode |CursorIM|
+    CursorColumn = { bg = palette.bg1 },
+    CursorLine = { bg = palette.bg1 },
+    Directory = { fg = palette.blue },
+    DiffAdd = { bg = "#244032", fg = "#56d364" },
+    DiffDelete = { bg = "#462c32", fg = "#f85149" },
+    DiffText = { fg = "#341a00", bg = "#fff987" },
+    DiffChange = { bg = "#341a00", fg = "#e3b341" },
+    EndOfBuffer = { fg = "#354c50" },
+    -- TermCursor   { }, -- cursor in a focused terminal
+    TermCursorNC = { fg = bg, bg = fg },
+    ErrorMsg = { fg = error, bg = mistake.bg },
+    VertSplit = { fg = "#2b3d40" },
+    Folded = { bg = "#182325", fg = "#7d7d7d" },
+    FoldColumn = { bg = bg, fg = "#4d4d4d" },
+    SignColumn = {},
+    IncSearch = { bg = palette.yellow, fg = bg },
+    -- Substitute   { }, -- |:substitute| replacement text highlighting
+    LineNr = { fg = "#5c5c5c" },
+    CursorLineNr = { fg = palette.blue, bold = 1 },
+    MatchParen = { sp = active, bg = palette.bg2, fg = fg },
+    -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    -- MsgArea      { }, -- Area for messages and cmdline
+    -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
+    MoreMsg = { fg = palette.green, bold = 1 },
+    NonText = { fg = "#696969" },
+    Normal = { bg = bg, fg = fg },
+    NormalFloat = { bg = float_bg },
+    -- NormalNC     { }, -- normal text in non-current windows
+    FloatBorder = floatborder,
+    Pmenu = { bg = pmenu_bg },
+    PmenuSel = { bg = "#354c50" },
+    PmenuSbar = { bg = "#212f31" },
+    PmenuThumb = { bg = "#47666b" },
+    Question = { fg = diffadd },
+    QuickFixLine = { bg = "#182325" },
+    Search = { bg = "#354c50" },
+    SpecialKey = { fg = palette.cyan },
+    SpellBad = { undercurl = 1, sp = palette.red },
+    SpellCap = { undercurl = 1, sp = palette.blue },
+    SpellLocal = { undercurl = 1, sp = palette.cyan },
+    SpellRare = { undercurl = 1, sp = palette.magenta },
+    StatusLine = { bg = statusline, fg = fg },
+    StatusLineNC = { bg = statusline, fg = "#9f9f9f" },
+    TabLine = { bg = statusline, fg = "#7d7d7d" },
+    TabLineFill = { bg = statusline },
+    TabLineSel = { bg = statusline, fg = palette.blue },
+    Title = { fg = const_fg },
+    Visual = { bg = "#293334" },
+    VisualNOS = { bg = "#293334" },
+    WarningMsg = { fg = "#e1ad4c" },
+    WildMenu = { bg = "#354c50" },
+    WinBar = { bg = bg, fg = palette.white, bold = true },
+    WinBarNC = { bg = bg, fg = "#7d7d7d" },
+
+    --- SYNTAX I: TS groups link to these
+    Constant = { fg = const_fg },
+    String = { fg = string_fg },
+    Character = { fg = const_fg },
+    Number = { fg = const_fg },
+    Boolean = { fg = const_fg },
+    Float = { fg = const_fg },
+    Operator = { fg = punct_fg },
+
+    --- SYNTAX II: TS groups have their own definition, the below are defined to have somewhat working hl w/o treesitter
+    Identifier = { fg = palette.white },
+    Function = { fg = def_fg },
+    Statement = { fg = palette.white },
+    Conditional = { fg = palette.white },
+    Repeat = { fg = palette.white },
+    Label = { fg = def_fg },
+    Keyword = { fg = palette.white },
+    Exception = { fg = palette.white },
+    PreProc = { fg = palette.white },
+    Include = { fg = palette.white },
+    Define = { fg = palette.white },
+    Macro = { fg = palette.white },
+    PreCondit = { fg = palette.white },
+    Type = { fg = palette.white },
+    StorageClass = { fg = palette.white },
+    Structure = { fg = def_fg },
+    Typedef = { fg = def_fg },
+
+    Special = { fg = palette.yellow },
+    -- TODO better color than diffchange, try reddish
+    -- SpecialChar = { fg = diffchange }, --  special character in a constant
+    -- Tag            { }, --    you can use CTRL-] on this
+    -- Delimiter      { },
+    SpecialComment = { bg = "#1d292b", fg = palette.blue },
+    debugPc = { bg = "#0f2534" },
+    debugBreakpoint = { bg = "#b33229" },
+    helpHyperTextJump = { fg = palette.magenta },
+    helpSectionDelim = { fg = palette.magenta },
+    helpExample = { fg = palette.cyan },
+    helpCommand = { fg = palette.cyan },
+    helpHeadline = { fg = palette.blue },
+    helpHeader = { fg = palette.magenta },
+
+    Underlined = { underline = 1 }, -- (preferred) text that stands out, HTML links
+    Italic = { italic = 1 },
+
+    -- ("Ignore", below, may be invisible...)
+    -- Ignore         { }, -- (preferred) left blank, hidden  |hl-Ignore|
+
+    Error = { bg = mistake.bg, fg = mistake.fg },
+
+    Todo = { bg = "#d0d058", fg = bg },
+
+    --- Diagnostic
+    LspReferenceText = { bg = "#253437" },
+    LspReferenceRead = { bg = "#253437" },
+    LspReferenceWrite = { bg = "#253437", underline = 1, sp = active },
+    LspCodeLens = { fg = "#5c5c5c" },
+    LspCodeLensSeparator = { fg = "#5c5c5c" },
+
+    --- Diagnostic
+    DiagnosticError = { fg = error },
+    DiagnosticWarn = { fg = warn },
+    DiagnosticHint = { fg = hint },
+    DiagnosticInfo = { fg = info },
+    DiagnosticVirtualTextError = { bg = "#350B0B", fg = "#D1503A" },
+    DiagnosticVirtualTextWarn = { bg = "#3F240A", fg = "#C8935D" },
+    DiagnosticVirtualTextHint = { bg = "#1D2B37", fg = "#7E9CB9" },
+    DiagnosticVirtualTextInfo = { bg = "#162C0B", fg = "#7BAC62" },
+
+    --- Treesitter
+    TSAttribute = {},
+    TSConstructor = { fg = palette.white },
+    TSConditional = { fg = palette.white },
+    TSConstBuiltin = { fg = const_fg },
+    TSConstMacro = { fg = palette.white },
+    TSError = { bg = mistake.bg, fg = mistake.fg },
+    TSException = { fg = palette.white },
+    TSField = { fg = palette.white },
+    TSFunction = { fg = palette.white },
+    TSFuncBuiltin = { fg = palette.white },
+    TSFuncMacro = { fg = palette.white },
+    TSKeyword = { fg = palette.white },
+    TSKeywordFunction = { fg = palette.white },
+    TSLabel = { fg = palette.white },
+    TSMethod = { fg = palette.white },
+    TSNamespace = { fg = palette.white },
+    TSNone = { fg = const_fg },
+    TSParameter = { fg = palette.white },
+    TSParameterReference = { fg = palette.white },
+    TSProperty = { fg = palette.white },
+    TSPunctDelimiter = { fg = punct_fg },
+    TSPunctBracket = { fg = "#bababa" },
+    TSPunctSpecial = { fg = punct_fg },
+    TSRepeat = { fg = palette.white },
+    TSString = { fg = string_fg },
+    TSStringRegex = { bg = "#1d292b", fg = const_fg },
+    TSStringEscape = { bg = "#1d292b", fg = const_fg },
+    TSSymbol = {},
+    TSType = { fg = palette.white },
+    TSTypeBuiltin = { fg = palette.white },
+    TSVariable = { fg = palette.white },
+    TSVariableBuiltin = { fg = palette.white },
+    TSTag = { fg = palette.white },
+    TSTagDelimiter = { fg = punct_fg },
+    TSText = { fg = palette.white },
+    ["@attribute"] = {},
+    ["@constructor"] = { fg = palette.white },
+    ["@conditional"] = { fg = palette.white },
+    ["@constant.builtin"] = { fg = const_fg },
+    ["@constant.macro"] = { fg = palette.white },
+    ["@error"] = { bg = mistake.bg, fg = mistake.fg },
+    ["@exception"] = { fg = palette.white },
+    ["@field"] = { fg = palette.white },
+    ["@function"] = { fg = def_fg },
+    ["@function.builtin"] = { fg = palette.white },
+    ["@function.macro"] = { fg = palette.white },
+    ["@keyword"] = { fg = palette.white },
+    ["@keyword.function"] = { fg = palette.white },
+    ["@keyword.operator"] = { fg = punct_fg },
+    ["@label"] = { fg = palette.white },
+    ["@method"] = { fg = palette.white },
+    ["@module"] = { fg = palette.white },
+    ["@namespace"] = { fg = palette.white },
+    ["@none"] = { fg = const_fg },
+    ["@parameter"] = { fg = palette.white },
+    ["@parameter.reference"] = { fg = palette.white },
+    ["@property"] = { fg = palette.white },
+    ["@punctuation.delimiter"] = { fg = punct_fg },
+    ["@punctuation.bracket"] = { fg = punct_fg },
+    ["@punctuation.special"] = { fg = punct_fg },
+    ["@repeat"] = { fg = palette.white },
+    ["@string"] = { fg = string_fg },
+    ["@string.regex"] = { bg = "#1d292b", fg = const_fg },
+    ["@string.escape"] = { bg = "#1d292b", fg = const_fg },
+    ["@symbol"] = {},
+    ["@type"] = { fg = palette.white },
+    ["@type.builtin"] = { fg = palette.white },
+    ["@variable"] = { fg = palette.white },
+    ["@variable.builtin"] = { fg = palette.white },
+    ["@tag"] = { fg = palette.white },
+    ["@tag.delimiter"] = { fg = punct_fg },
+    ["@text"] = { fg = palette.white },
+    ["@text.note"] = { bg = "#1d292b", fg = palette.blue },
+    ["@text.warning"] = { bg = "#d0d058", fg = bg },
+
+    --- Theme specific
+    ["@AlabasterBase"] = { fg = palette.white },
+    ["@AlabasterConstant"] = { fg = const_fg },
+    ["@AlabasterDefinition"] = { fg = def_fg },
+    ["@AlabasterPunct"] = { fg = punct_fg },
+    ["@AlabasterString"] = { fg = string_fg },
+    ["@AlabasterHashbang"] = { fg = dim_comment },
+    --- Gitsigns
+    GitSignsAdd = { fg = diffadd },
+    GitSignsChange = { fg = diffchange },
+    GitSignsDelete = { fg = diffdelete },
+    --- Telescope
+    TelescopeBorder = { fg = "#2b3d40" },
+    TelescopeMatching = { fg = "#f09942" },
+    TelescopeMultiSelection = { fg = palette.magenta },
+    TelescopePromptPrefix = { fg = palette.blue },
+    TelescopeSelectionCaret = { fg = mistake.fg },
+    TelescopeTitle = { fg = palette.brightyellow },
+    TelescopeResultsTitle = { fg = palette.yellow },
+    --- fzf-lua
+    FzfLuaBorder = { fg = "#2b3d40" },
+    --- Neogit
+    NeogitPopupActionDisabled = { fg = darker_fg },
+    NeogitPopupActionKey = { fg = palette.magenta },
+    NeogitPopupOptionDisabled = { fg = darker_fg },
+    NeogitPopupOptionKey = { fg = palette.blue },
+    NeogitPopupSwitchDisabled = { fg = darker_fg },
+    NeogitPopupSwitchEnabled = { fg = palette.cyan },
+    NeogitPopupSwitchKey = { fg = palette.magenta },
+    --- Fugitive
+    diffAdded = { link = "DiffAdd" },
+    diffRemoved = { link = "DiffDelete" },
+    --- Startify
+    StartifyBracket = { fg = darker_fg },
+    StartifyFile = { fg = palette.white },
+    StartifySection = { fg = palette.green },
+    StartifySlash = { fg = "#4e6e75" },
+    StartifyPath = { fg = "#4e6e75" },
+    --- Statusline
+    StatuslineAdd = { fg = diffadd, bg = statusline },
+    StatuslineErr = { fg = error, bg = statusline },
+    StatuslineHint = { fg = hint, bg = statusline },
+    StatuslineInfo = { fg = info, bg = statusline },
+    StatuslineWarn = { fg = warn, bg = statusline },
+    StatuslineBlue = { fg = palette.blue, bg = statusline },
+    StatuslineRed = { fg = palette.red, bg = statusline },
+    StatuslineGreen = { fg = palette.green, bg = statusline },
+    StatuslineCyan = { fg = palette.cyan, bg = statusline },
+    StatuslineMagenta = { fg = palette.magenta, bg = statusline },
+    --- ALE
+    ALEWarningSign = { fg = warn },
+    --- vim-matchup
+    MatchupVirtualText = { fg = palette.yellow },
+    --- For `highlight link`
+    AlabasterBlack = { fg = palette.black },
+    AlabasterBlue = { fg = palette.blue },
+    AlabasterBrightYellow = { fg = palette.brightyellow },
+    AlabasterCyan = { fg = palette.cyan },
+    AlabasterGreen = { fg = palette.green },
+    AlabasterDarkGreen = { fg = "#6abf40" },
+    AlabasterMagenta = { fg = palette.magenta },
+    AlabasterRed = { fg = palette.red },
+    AlabasterWhite = { fg = palette.white },
+    AlabasterYellow = { fg = palette.yellow },
+    --- Hop
+    HopNextKey = { fg = palette.brightyellow },
+    HopNextKey1 = { fg = palette.cyan },
+    HopNextKey2 = { fg = "#297567" },
+    HopUnmatched = { fg = "#3d3d3d" },
+    --- Lightspeed
+    LightspeedGreyWash = { fg = "#3d3d3d" },
+    --- checkhealth
+    healthSuccess = { fg = palette.green, bg = bg },
+    --- cmp
+    CmpItemMenuDefault = { fg = palette.magenta },
+    --- nvim-ts-rainbow
+    rainbowcol1 = { fg = palette.yellow },
+    rainbowcol2 = { fg = palette.magenta },
+    rainbowcol3 = { fg = palette.blue },
+    rainbowcol4 = { fg = palette.green },
+    rainbowcol5 = { fg = palette.brightyellow },
+    rainbowcol6 = { fg = palette.red },
+    rainbowcol7 = { fg = palette.cyan },
+    --- Iswap
+    ISwapSnipe = { bg = palette.yellow, fg = bg },
+    ISwapGrey = { fg = "#3d3d3d" },
+    --- vim-dadbod-ui
+    dbui_help = { fg = dim_comment },
+    dbui_connection_source = { fg = dim_comment },
+    --- nvim-dap-virtual-text
+    NvimDapVirtualText = { bg = "#1d292b", fg = palette.cyan },
+    --- Noice
+    NoiceCmdlineIcon = { link = "AlabasterDarkGreen" },
+    NoiceCmdlinePopupBorder = { link = "AlabasterDarkGreen" },
+    NoiceConfirmBorder = { link = "AlabasterDarkGreen" },
+    NoiceCmdlinePopupBorderCmdline = { link = "AlabasterDarkGreen" },
+    NoiceCmdlineIconCmdline = { link = "AlabasterDarkGreen" },
+    NoiceCmdlinePopupBorderFilter = { link = "AlabasterDarkGreen" },
+    NoiceCmdlineIconFilter = { link = "AlabasterDarkGreen" },
+    NoiceCmdlinePopupBorderLua = { link = "AlabasterDarkGreen" },
+    NoiceCmdlineIconLua = { link = "AlabasterDarkGreen" },
+    NoiceCmdlinePopupBorderSearch = { link = "AlabasterYellow" },
+    NoiceCmdlineIconSearch = { link = "AlabasterYellow" },
+    -- Languages
+    --- asm
+    asmDirective = { fg = dim_comment },
+    nasmLabel = { link = "@AlabasterDefinition" },
+}
+
+for group, hl in pairs(theme) do
+    vim.api.nvim_set_hl(0, group, hl)
+end
