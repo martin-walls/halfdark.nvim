@@ -1,27 +1,29 @@
 -- Color blending tool: https://meyerweb.com/eric/tools/color-blend/
+--
+-- Base color is the 500 shade. Darker shades lower, lighter shades higher numbers.
 
 return {
     black = "#181a1f",
-    -- Base background colour
-    bg0 = "#282c34",
-    -- Lighter bg shades
-    bg1 = "#31353f",
-    bg2 = "#393f4a",
+
     -- Darker bg shade
-    bg_d = "#21252b",
+    bg400 = "#21252b",
+    -- Base background colour
+    bg500 = "#282c34",
+    -- Lighter bg shades
+    bg600 = "#31353f",
+    bg700 = "#393f4a",
+    bg800 = "#424750",
+    bg900 = "#5c626c",
     -- Coloured bgs
-    bg_blue = "#73b8f1",
-
-    bg = {
-        yellow100 = "#ebd09c",
-        yellow75 = "#c8b289",
-    },
-
+    bg_blue500 = "#73b8f1",
+    bg_yellow500 = "#ebd09c",
+    bg_yellow400 = "#c8b289",
 
     -- Base foreground colour
-    fg0 = "#abb2bf",
+    fg500 = "#abb2bf",
     -- Ligher fg shade
-    fg1 = "#e0e2e5",
+    fg600 = "#e0e2e5",
+
     purple = "#c678dd",
     green = "#98c379",
     orange = "#d19a66",

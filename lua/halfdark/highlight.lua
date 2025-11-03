@@ -3,28 +3,28 @@ local palette = require("halfdark.palette")
 
 local theme = {
     -- BASELINE --
-    Normal = { bg = palette.bg0, fg = palette.fg0 },
+    Normal = { bg = palette.bg500, fg = palette.fg500 },
     Comment = { fg = palette.grey, bg = palette.black },
 
-    Conceal = { fg = palette.bg2 },
+    Conceal = { fg = palette.bg700 },
 
     -- SEARCH --
-    Search = { bg = palette.bg.yellow100, fg = palette.black },
-    CurSearch = { bg = palette.bg.yellow75, fg = palette.black },
+    Search = { bg = palette.yellow500, fg = palette.black },
+    CurSearch = { bg = palette.yellow400, fg = palette.black },
     IncSearch = { link = "CurSearch" },
     Substitute = { link = "CurSearch" },
 
-    MatchParen = { bg = palette.light_grey, fg = palette.fg1 },
+    MatchParen = { bg = palette.light_grey, fg = palette.fg600 },
 
     DiffAdd = { bg = palette.green, fg = palette.black },
-    DiffChange = { bg = palette.bg_blue, fg = palette.black },
+    DiffChange = { bg = palette.blue500, fg = palette.black },
     DiffDelete = { bg = palette.red, fg = palette.black },
-    DiffText = { bg = palette.bg2, fg = palette.fg1 },
+    DiffText = { bg = palette.bg700, fg = palette.fg600 },
 
-    ColorColumn = { bg = palette.bg1 },
-    CursorColumn = { bg = palette.bg1 },
-    CursorLine = { bg = palette.bg1 },
-    EndOfBuffer = { fg = palette.bg2 },
+    ColorColumn = { bg = palette.bg600 },
+    CursorColumn = { bg = palette.bg600 },
+    CursorLine = { bg = palette.bg600 },
+    EndOfBuffer = { fg = palette.bg700 },
     NonText = { fg = palette.grey },
 
     -- THEME VARIABLES                                    --
@@ -46,7 +46,7 @@ local theme = {
 
     -- UI Layout --
     WinSeparator = { fg = palette.grey },
-    Folded = { bg = palette.black, fg = palette.fg0 },
+    Folded = { bg = palette.black, fg = palette.fg500 },
     SignColumn = { fg = palette.grey },
     FoldColumn = { link = "SignColumn" },
 
