@@ -1,3 +1,5 @@
+-- Color blending tool: https://meyerweb.com/eric/tools/color-blend/
+
 return {
     black = "#181a1f",
     -- Base background colour
@@ -9,7 +11,13 @@ return {
     bg_d = "#21252b",
     -- Coloured bgs
     bg_blue = "#73b8f1",
-    bg_yellow = "#ebd09c",
+
+    bg = {
+        yellow100 = "#ebd09c",
+        yellow75 = "#c8b289",
+    },
+
+
     -- Base foreground colour
     fg0 = "#abb2bf",
     -- Ligher fg shade

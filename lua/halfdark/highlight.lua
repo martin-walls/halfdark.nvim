@@ -7,7 +7,14 @@ local theme = {
     Comment = { fg = palette.grey, bg = palette.black },
 
     Conceal = { fg = palette.bg2 },
-    CurSearch = { bg = palette.bg_yellow, fg = palette.black },
+
+    -- SEARCH --
+    Search = { bg = palette.bg.yellow100, fg = palette.black },
+    CurSearch = { bg = palette.bg.yellow75, fg = palette.black },
+    IncSearch = { link = "CurSearch" },
+    Substitute = { link = "CurSearch" },
+
+    MatchParen = { bg = palette.light_grey, fg = palette.fg1 },
 
     DiffAdd = { bg = palette.green, fg = palette.black },
     DiffChange = { bg = palette.bg_blue, fg = palette.black },
@@ -17,7 +24,8 @@ local theme = {
     ColorColumn = { bg = palette.bg1 },
     CursorColumn = { bg = palette.bg1 },
     CursorLine = { bg = palette.bg1 },
-    EndOfBuffer = { fg = palette.grey },
+    EndOfBuffer = { fg = palette.bg2 },
+    NonText = { fg = palette.grey },
 
     -- THEME VARIABLES                                    --
     -- Single points of truth for other groups to link to --
@@ -33,6 +41,15 @@ local theme = {
     String = { fg = palette.green },
     Operator = { link = "HalfdarkPunctuation" },
 
+    -- Built-in Diagnostics --
+    ErrorMsg = { fg = palette.red },
+
+    -- UI Layout --
+    WinSeparator = { fg = palette.grey },
+    Folded = { bg = palette.black, fg = palette.fg0 },
+    SignColumn = { fg = palette.grey },
+    FoldColumn = { link = "SignColumn" },
+
     -- LSP --
 }
 
@@ -43,6 +60,6 @@ function M.setup()
 end
 
 -- NOTE: just for local dev fast feedback loop
-M.setup();
+M.setup()
 
 return M
