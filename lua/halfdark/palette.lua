@@ -13,7 +13,6 @@ return {
     bg600 = "#31353f",
     bg700 = "#393f4a",
     bg800 = "#424750",
-    bg900 = "#5c626c",
     -- Coloured bgs
     bg_blue500 = "#73b8f1",
     bg_yellow500 = "#ebd09c",
@@ -24,19 +23,27 @@ return {
     -- Ligher fg shade
     fg600 = "#e0e2e5",
 
-    purple = "#c678dd",
-    green = "#98c379",
-    orange = "#d19a66",
-    blue = "#61afef",
-    yellow = "#e5c07b",
-    cyan = "#56b6c2",
-    red = "#e86671",
-    grey = "#5c6370",
-    light_grey = "#848b98",
-    dark_cyan = "#2b6f77",
-    dark_red = "#993939",
-    dark_yellow = "#93691d",
-    dark_purple = "#8a3fa0",
+    purple300 = "#8a3fa0",
+    purple500 = "#c678dd",
+
+    green500 = "#98c379",
+
+    orange500 = "#d19a66",
+
+    blue500 = "#61afef",
+
+    yellow300 = "#93691d",
+    yellow500 = "#e5c07b",
+
+    cyan300 = "#2b6f77",
+    cyan500 = "#56b6c2",
+
+    red300 = "#993939",
+    red500 = "#e86671",
+
+    grey500 = "#5c6370",
+    grey700 = "#848b98",
+
     diff_add = "#31392b",
     diff_delete = "#382b2c",
     diff_change = "#1c3448",
