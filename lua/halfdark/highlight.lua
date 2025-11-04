@@ -118,7 +118,7 @@ local theme = {
     DiagnosticUnderlineOk = { undercurl = 1, sp = palette.green500 },
     DiagnosticUnderlineHint = { undercurl = 1, sp = palette.blue500 },
     DiagnosticUnderlineWarn = { undercurl = 1, sp = palette.yellow500 },
-    DiagnosticUnderlineError = { undercurl = 1, sp = palette.red500 },
+    DiagnosticUnderlineError = { bg = palette.red300 },
 }
 
 function M.setup()

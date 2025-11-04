@@ -1,3 +1,4 @@
 - [ ] Set color theme for all highlight groups
 - [ ] Refactor for extensibility
 - [ ] TS query: highlight JSON strings in zsh curl commands
+- [ ] TS query: @function.method.call.c_sharp doesn't work with generics e.g. foo<int>()
