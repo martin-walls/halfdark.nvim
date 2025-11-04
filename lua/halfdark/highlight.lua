@@ -90,6 +90,12 @@ local theme = {
     LspReferenceWrite = { link = "LspReferenceRead" },
     LspReferenceText = { link = "LspReferenceRead" },
 
+    -- C# XMLdoc comments --
+    ["@lsp.type.xmlDocCommentDelimiter"] = { link = "Comment" },
+    ["@lsp.type.xmlDocCommentName"] = { link = "@lsp.type.xmlDocCommentDelimiter" },
+    ["@lsp.type.xmlDocCommentAttributeName"] = { link = "@lsp.type.xmlDocCommentDelimiter" },
+    ["@lsp.type.xmlDocCommentAttributeQuotes"] = { link = "@lsp.type.xmlDocCommentDelimiter" },
+
     -- Diagnostics --
     DiagnosticInfo = { fg = palette.cyan500 },
     DiagnosticOk = { fg = palette.green500 },
@@ -123,6 +129,10 @@ local theme = {
 
     -- CUSTOM HIGHLIGHT QUERIES --
     ["@halfdark.topLevelDefn"] = { link = "HalfdarkTopLevelDefn" },
+
+    -- LANGUAGE-SPECIFIC OVERRIDES --
+    ["@function.method.c_sharp"] = { link = "Normal" },
+    ["@lsp.type.method.cs"] = { link = "Normal" },
 }
 
 function M.setup()
