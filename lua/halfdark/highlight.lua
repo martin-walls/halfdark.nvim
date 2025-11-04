@@ -87,7 +87,9 @@ local theme = {
     LspReferenceWrite = { link = "LspReferenceRead" },
     LspReferenceText = { link = "LspReferenceRead" },
 
+    -- TODO: need a highlight group of just top-level defn for methods and classes
     ["@lsp.type.method"] = { link = "HalfdarkTopLevelDefn" },
+    -- ["@lsp.type.class"] = { link = "HalfdarkTopLevelDefn" },
 
     -- Diagnostics --
     DiagnosticInfo = { fg = palette.cyan500 },

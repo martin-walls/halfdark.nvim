@@ -2,3 +2,4 @@
 - [ ] Refactor for extensibility
 - [ ] TS query: highlight JSON strings in zsh curl commands
 - [ ] TS query: @function.method.call.c_sharp doesn't work with generics e.g. foo<int>()
+- [ ] TS query: @lsp.type.class.cs includes both top-level defn and class references. I want a highlight group of just top-level defn
