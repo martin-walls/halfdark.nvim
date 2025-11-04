@@ -77,6 +77,7 @@ local theme = {
     -- Treesitter --
     -- TODO: C# doc comment highlighting tags etc
     ["@comment.documentation"] = { link = "HalfdarkDocComment" },
+    ["@constant.builtin"] = { link = "Constant" },
     ["@function.method"] = { link = "HalfdarkTopLevelDefn" },
     ["@function.method.call"] = { link = "Normal" },
     ["@keyword"] = { fg = palette.grey700 },
