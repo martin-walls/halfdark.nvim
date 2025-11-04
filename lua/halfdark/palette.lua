@@ -25,6 +25,7 @@ return {
 
     purple300 = "#8a3fa0",
     purple500 = "#c678dd",
+    purple700 = "#d193e4",
 
     green500 = "#98c379",
 

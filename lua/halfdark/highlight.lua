@@ -35,6 +35,7 @@ local theme = {
     -- Single points of truth for other groups to link to --
     HalfdarkPunctuation = { fg = palette.grey500 },
     HalfdarkTopLevelDefn = { fg = palette.blue500 },
+    HalfdarkVariableDefn = { fg = palette.purple700 },
     HalfdarkVariable = { fg = palette.fg500 },
     HalfdarkDocComment = { bg = palette.black, fg = palette.yellow500 },
 
@@ -133,6 +134,7 @@ local theme = {
 
     -- CUSTOM HIGHLIGHT QUERIES --
     ["@halfdark.topLevelDefn"] = { link = "HalfdarkTopLevelDefn" },
+    ["@halfdark.variableDefn"] = { link = "HalfdarkVariableDefn" },
 
     -- LANGUAGE-SPECIFIC OVERRIDES --
     ["@function.method.c_sharp"] = { link = "Normal" },
