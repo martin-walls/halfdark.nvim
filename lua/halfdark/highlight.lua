@@ -36,6 +36,7 @@ local theme = {
     HalfdarkPunctuation = { fg = palette.grey500 },
     HalfdarkTopLevelDefn = { fg = palette.blue500 },
     HalfdarkVariable = { fg = palette.fg500 },
+    HalfdarkDocComment = { bg = palette.black, fg = palette.yellow500 },
 
     -- BASELINE SYNTAX                            --
     -- Treesitter groups link to these by default --
@@ -74,6 +75,8 @@ local theme = {
     FoldColumn = { link = "SignColumn" },
 
     -- Treesitter --
+    -- TODO: C# doc comment highlighting tags etc
+    ["@comment.documentation"] = { link = "HalfdarkDocComment" },
     ["@function.method"] = { link = "HalfdarkTopLevelDefn" },
     ["@function.method.call"] = { link = "Normal" },
     ["@keyword"] = { fg = palette.grey700 },
@@ -86,10 +89,6 @@ local theme = {
     LspReferenceRead = { underline = 1, sp = palette.grey700 },
     LspReferenceWrite = { link = "LspReferenceRead" },
     LspReferenceText = { link = "LspReferenceRead" },
-
-    -- TODO: need a highlight group of just top-level defn for methods and classes
-    ["@lsp.type.method"] = { link = "HalfdarkTopLevelDefn" },
-    -- ["@lsp.type.class"] = { link = "HalfdarkTopLevelDefn" },
 
     -- Diagnostics --
     DiagnosticInfo = { fg = palette.cyan500 },
@@ -121,6 +120,9 @@ local theme = {
     DiagnosticUnderlineHint = { undercurl = 1, sp = palette.blue500 },
     DiagnosticUnderlineWarn = { undercurl = 1, sp = palette.yellow500 },
     DiagnosticUnderlineError = { bg = palette.red300 },
+
+    -- CUSTOM HIGHLIGHT QUERIES --
+    ["@halfdark.topLevelDefn"] = { link = "HalfdarkTopLevelDefn" },
 }
 
 function M.setup()
@@ -130,6 +132,6 @@ function M.setup()
 end
 
 -- NOTE: just for local dev fast feedback loop
-M.setup()
+-- M.setup()
 
 return M
