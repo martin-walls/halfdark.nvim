@@ -8,3 +8,4 @@ Colours are based on Atom's One Dark theme.
 The following languages are explicitly supported by the colorscheme. Other languages will of course work but the highlighting may be less accurate.
 
 - C#
+- Markdown

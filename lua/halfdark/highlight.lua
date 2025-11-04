@@ -8,7 +8,7 @@ local theme = {
     Special = { fg = palette.fg600 },
     Comment = { fg = palette.grey500, bg = palette.black },
 
-    Conceal = { fg = palette.bg700 },
+    Conceal = { fg = palette.grey500 },
 
     -- SEARCH --
     Search = { bg = palette.bg_yellow500, fg = palette.black },
@@ -56,6 +56,9 @@ local theme = {
     Statement = { link = "Normal" },
     Type = { link = "Normal" },
 
+    Title = { fg = palette.blue500, bold = 1 },
+
+    -- DIFF --
     Error = { bg = palette.red300 },
     Added = { fg = palette.green500 },
     Changed = { fg = palette.cyan500 },
@@ -75,8 +78,8 @@ local theme = {
     FoldColumn = { link = "SignColumn" },
 
     -- Treesitter --
-    -- TODO: C# doc comment highlighting tags etc
     ["@comment.documentation"] = { link = "HalfdarkDocComment" },
+    ["@conceal"] = { link = "Conceal" },
     ["@constant.builtin"] = { link = "Constant" },
     ["@function.method"] = { link = "HalfdarkTopLevelDefn" },
     ["@function.method.call"] = { link = "Normal" },
