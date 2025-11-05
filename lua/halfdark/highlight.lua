@@ -37,6 +37,7 @@ local theme = {
     HalfdarkTopLevelDefn = { fg = palette.blue500 },
     HalfdarkVariableDefn = { fg = palette.purple700 },
     HalfdarkVariable = { fg = palette.fg500 },
+    HalfdarkParameter = { fg = palette.orange500 },
     HalfdarkDocComment = { bg = palette.black, fg = palette.yellow500 },
 
     -- BASELINE SYNTAX                            --
@@ -89,6 +90,7 @@ local theme = {
     ["@type"] = { link = "Normal" },
     ["@type.builtin"] = { link = "Normal" },
     ["@variable"] = { link = "HalfdarkVariable" },
+    ["@variable.parameter"] = { link = "HalfdarkParameter" },
 
     -- LSP --
     LspReferenceRead = { underline = 1, sp = palette.grey700 },
@@ -135,6 +137,7 @@ local theme = {
     -- CUSTOM HIGHLIGHT QUERIES --
     ["@halfdark.topLevelDefn"] = { link = "HalfdarkTopLevelDefn" },
     ["@halfdark.variableDefn"] = { link = "HalfdarkVariableDefn" },
+    ["@halfdark.declarationType"] = { link = "Normal" },
 
     -- LANGUAGE-SPECIFIC OVERRIDES --
     ["@function.method.c_sharp"] = { link = "Normal" },

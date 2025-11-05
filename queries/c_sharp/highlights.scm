@@ -8,3 +8,9 @@
 
 (variable_declarator
   name: (identifier) @halfdark.variableDefn (#set! priority 150))
+
+(property_declaration
+  type: (predefined_type) @halfdark.declarationType (#set! priority 150))
+
+(variable_declaration
+  type: (predefined_type) @halfdark.declarationType (#set! priority 150))
