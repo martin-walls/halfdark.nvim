@@ -84,6 +84,7 @@ local theme = {
     ["@conceal"] = { link = "Conceal" },
     ["@constant.builtin"] = { link = "Constant" },
     ["@function.method"] = { link = "HalfdarkTopLevelDefn" },
+    ["@function.builtin"] = { link = "@function" },
     ["@function.method.call"] = { link = "Normal" },
     ["@keyword"] = { fg = palette.grey700 },
     ["@punctuation"] = { link = "HalfdarkPunctuation" },
