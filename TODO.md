@@ -1,3 +1,2 @@
-- [ ] Set color theme for all highlight groups
-- [ ] Refactor for extensibility
 - [ ] TS query: highlight JSON strings in zsh curl commands
+- [ ] Better Telescope highlighting
