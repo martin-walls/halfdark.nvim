@@ -19,11 +19,10 @@ local theme = {
     -- SELECTION --
     Visual = { bg = palette.bg_yellow500, fg = palette.black },
 
-    -- TODO: better colours here -- and link TS diff groups
-    DiffAdd = { bg = palette.green500, fg = palette.diff_add },
-    DiffChange = { bg = palette.bg_blue500, fg = palette.diff_change },
-    DiffDelete = { bg = palette.red500, fg = palette.diff_delete },
-    DiffText = { bg = palette.fg500, fg = palette.diff_text },
+    DiffAdd = { link = "Added" },
+    DiffChange = { link = "Changed" },
+    DiffDelete = { link = "Removed" },
+    DiffText = { bg = palette.cyan300, fg = palette.cyan500 },
 
     ColorColumn = { bg = palette.bg600 },
     CursorColumn = { bg = palette.bg600 },
@@ -62,8 +61,9 @@ local theme = {
 
     Title = { fg = palette.blue500, bold = 1 },
 
-    -- DIFF --
     Error = { bg = palette.red300 },
+
+    -- DIFF --
     Added = { fg = palette.green500 },
     Changed = { fg = palette.cyan500 },
     Removed = { fg = palette.red500 },
