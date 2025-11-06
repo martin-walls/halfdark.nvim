@@ -10,6 +10,6 @@ The following languages are explicitly supported by the colorscheme. Other langu
 - C#
 - Markdown
 
-## Supported Plugins
+## Themed Plugins
 
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)

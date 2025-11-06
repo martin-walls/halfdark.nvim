@@ -33,12 +33,12 @@ local theme = {
 
     -- THEME VARIABLES                                    --
     -- Single points of truth for other groups to link to --
-    HalfdarkPunctuation = { fg = palette.grey500 },
-    HalfdarkTopLevelDefn = { fg = palette.blue500 },
-    HalfdarkVariableDefn = { fg = palette.purple700 },
-    HalfdarkVariable = { fg = palette.fg500 },
-    HalfdarkParameter = { fg = palette.orange500 },
-    HalfdarkDocComment = { bg = palette.black, fg = palette.yellow500 },
+    ["@halfdark.definition"] = { fg = palette.blue500 },
+    ["@halfdark.variableDefinition"] = { fg = palette.purple700 },
+    ["@halfdark.declarationType"] = { link = "Normal" },
+    ["@halfdark.punctuation"] = { fg = palette.grey500 },
+    ["@halfdark.parameter"] = { fg = palette.orange500 },
+    ["@halfdark.docComment"] = { bg = palette.black, fg = palette.yellow500 },
 
     -- BASELINE SYNTAX                            --
     -- Treesitter groups link to these by default --
@@ -48,12 +48,12 @@ local theme = {
     Float = { link = "Constant" },
     Number = { link = "Constant" },
     String = { fg = palette.green500 },
-    Operator = { link = "HalfdarkPunctuation" },
+    Operator = { link = "@halfdark.punctuation" },
 
     MatchParen = { bg = palette.grey700, fg = palette.fg600 },
 
-    Identifier = { link = "HalfdarkVariable" },
-    Function = { link = "HalfdarkTopLevelDefn" },
+    Identifier = { link = "Normal" },
+    Function = { link = "@halfdark.definition" },
     PreProc = { link = "Normal" },
     Statement = { link = "Normal" },
     Type = { link = "Normal" },
@@ -80,18 +80,18 @@ local theme = {
     FoldColumn = { link = "SignColumn" },
 
     -- Treesitter --
-    ["@comment.documentation"] = { link = "HalfdarkDocComment" },
+    ["@comment.documentation"] = { link = "@halfdark.docComment" },
     ["@conceal"] = { link = "Conceal" },
     ["@constant.builtin"] = { link = "Constant" },
-    ["@function.method"] = { link = "HalfdarkTopLevelDefn" },
+    ["@function.method"] = { link = "@halfdark.definition" },
     ["@function.builtin"] = { link = "@function" },
     ["@function.method.call"] = { link = "Normal" },
     ["@keyword"] = { fg = palette.grey700 },
-    ["@punctuation"] = { link = "HalfdarkPunctuation" },
+    ["@punctuation"] = { link = "@halfdark.punctuation" },
     ["@type"] = { link = "Normal" },
     ["@type.builtin"] = { link = "Normal" },
-    ["@variable"] = { link = "HalfdarkVariable" },
-    ["@variable.parameter"] = { link = "HalfdarkParameter" },
+    ["@variable"] = { link = "Identifier" },
+    ["@variable.parameter"] = { link = "@halfdark.parameter" },
 
     -- LSP --
     LspReferenceRead = { underline = 1, sp = palette.grey700 },
@@ -134,11 +134,6 @@ local theme = {
     DiagnosticUnderlineHint = { undercurl = 1, sp = palette.blue500 },
     DiagnosticUnderlineWarn = { undercurl = 1, sp = palette.yellow500 },
     DiagnosticUnderlineError = { bg = palette.red300 },
-
-    -- CUSTOM HIGHLIGHT QUERIES --
-    ["@halfdark.topLevelDefn"] = { link = "HalfdarkTopLevelDefn" },
-    ["@halfdark.variableDefn"] = { link = "HalfdarkVariableDefn" },
-    ["@halfdark.declarationType"] = { link = "Normal" },
 
     -- LANGUAGE-SPECIFIC OVERRIDES --
     ["@function.method.c_sharp"] = { link = "Normal" },
