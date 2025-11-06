@@ -53,6 +53,8 @@ local theme = {
     MatchParen = { bg = palette.grey700, fg = palette.fg600 },
 
     Identifier = { link = "Normal" },
+    -- If not using Treesitter, highlight all functions as definitions,
+    -- but when using @function with TS below, we can be smarter than this
     Function = { link = "@halfdark.definition" },
     PreProc = { link = "Normal" },
     Statement = { link = "Normal" },
@@ -83,9 +85,8 @@ local theme = {
     ["@comment.documentation"] = { link = "@halfdark.docComment" },
     ["@conceal"] = { link = "Conceal" },
     ["@constant.builtin"] = { link = "Constant" },
-    ["@function.method"] = { link = "@halfdark.definition" },
-    ["@function.builtin"] = { link = "@function" },
-    ["@function.method.call"] = { link = "Normal" },
+    ["@function"] = { link = "Normal" },
+    ["@function.builtin"] = { link = "Normal" },
     ["@keyword"] = { fg = palette.grey700 },
     ["@punctuation"] = { link = "@halfdark.punctuation" },
     ["@type"] = { link = "Normal" },
@@ -134,10 +135,6 @@ local theme = {
     DiagnosticUnderlineHint = { undercurl = 1, sp = palette.blue500 },
     DiagnosticUnderlineWarn = { undercurl = 1, sp = palette.yellow500 },
     DiagnosticUnderlineError = { bg = palette.red300 },
-
-    -- LANGUAGE-SPECIFIC OVERRIDES --
-    ["@function.method.c_sharp"] = { link = "Normal" },
-    ["@lsp.type.method.cs"] = { link = "Normal" },
 
     -- PLUGIN SUPPORT --
     fugitiveHash = { fg = palette.red500 },
