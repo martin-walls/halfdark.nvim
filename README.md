@@ -5,10 +5,9 @@ Colours are based on Atom's One Dark theme.
 
 ## Language Support
 
-The following languages are explicitly supported by the colorscheme. Other languages will of course work but the highlighting may be less accurate.
+Treesitter highlight queries are included for the following languages.
 
 - C#
-- Markdown
 
 ## Themed Plugins
 
