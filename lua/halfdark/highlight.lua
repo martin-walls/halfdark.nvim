@@ -143,6 +143,11 @@ local theme = {
     -- LANGUAGE-SPECIFIC OVERRIDES --
     ["@function.method.c_sharp"] = { link = "Normal" },
     ["@lsp.type.method.cs"] = { link = "Normal" },
+
+    -- PLUGIN SUPPORT --
+    fugitiveHash = { fg = palette.red500 },
+    fugitiveUnstagedModifier = { fg = palette.red500 },
+    fugitiveStagedModifier = { fg = palette.red500 },
 }
 
 function M.setup()
