@@ -139,10 +139,17 @@ local theme = {
     DiagnosticUnderlineWarn = { undercurl = 1, sp = palette.yellow500 },
     DiagnosticUnderlineError = { bg = palette.red300 },
 
-    -- PLUGIN SUPPORT --
+    -- Fugitive --
     fugitiveHash = { fg = palette.red500 },
     fugitiveUnstagedModifier = { fg = palette.red500 },
     fugitiveStagedModifier = { fg = palette.red500 },
+
+    -- Telescope --
+    TelescopeSelection = { bg = palette.bg700 },
+    TelescopeBorder = { fg = palette.grey500 },
+    TelescopeMatching = { underline = 1 },
+    TelescopeTitle = { fg = palette.grey700 },
+    TelescopePromptPrefix = { fg = palette.grey500 },
 }
 
 function M.setup()
@@ -150,8 +157,5 @@ function M.setup()
         vim.api.nvim_set_hl(0, group, hl)
     end
 end
-
--- NOTE: just for local dev fast feedback loop
--- M.setup()
 
 return M
