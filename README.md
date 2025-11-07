@@ -8,6 +8,7 @@ Colours are based on Atom's One Dark theme.
 Treesitter highlight queries are included for the following languages.
 
 - C#
+- PHP
 - TypeScript
 
 ## Themed Plugins
