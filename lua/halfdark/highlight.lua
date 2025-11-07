@@ -112,6 +112,7 @@ local theme = {
     DiagnosticHint = { fg = palette.blue500 },
     DiagnosticWarn = { fg = palette.yellow500 },
     DiagnosticError = { fg = palette.red500 },
+    DiagnosticUnnecessary = { fg = palette.grey500 },
 
     DiagnosticVirtualTextInfo = { bg = palette.black, fg = palette.cyan500 },
     DiagnosticVirtualTextOk = { bg = palette.black, fg = palette.green500 },
