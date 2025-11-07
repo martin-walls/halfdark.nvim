@@ -82,6 +82,14 @@ local theme = {
     SignColumn = { fg = palette.grey500 },
     FoldColumn = { link = "SignColumn" },
 
+    -- Floating windows
+    NormalFloat = { bg = palette.black },
+    -- Popup menus e.g. autocompletion
+    Pmenu = { bg = palette.black },
+    PmenuSel = { bg = palette.bg800 },
+    PmenuSbar = { bg = palette.black },
+    PmenuThumb = { bg = palette.bg600 },
+
     -- Treesitter --
     ["@comment.documentation"] = { link = "@halfdark.docComment" },
     ["@conceal"] = { link = "Conceal" },
