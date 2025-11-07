@@ -38,6 +38,7 @@ local theme = {
     ["@halfdark.punctuation"] = { fg = palette.grey500 },
     ["@halfdark.parameter"] = { fg = palette.orange500 },
     ["@halfdark.docComment"] = { bg = palette.black, fg = palette.yellow500 },
+    ["@halfdark.normal"] = { link = "Normal" },
 
     -- BASELINE SYNTAX                            --
     -- Treesitter groups link to these by default --
