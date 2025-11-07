@@ -21,6 +21,12 @@
   name: (identifier) @halfdark.variableDefinition (#set! priority 150))
 (property_declaration
   name: (identifier) @halfdark.variableDefinition (#set! priority 150))
+; Creating a variable as an out parameter
+(declaration_expression
+  name: (identifier) @halfdark.variableDefinition (#set! priority 150))
+; Creating a variable by pattern matching
+(declaration_pattern
+  name: (identifier) @halfdark.variableDefinition (#set! priority 150))
 
 (property_declaration
   type: (predefined_type) @halfdark.declarationType (#set! priority 150))
