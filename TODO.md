@@ -1,5 +1,1 @@
 - [ ] document highlighting rules in README
-- [ ] Floating window highlights
-- [ ] Autocomplete suggestion popup highlights
-- [ ] Better Telescope highlighting
-- [ ] TS query: highlight JSON strings in zsh curl commands
