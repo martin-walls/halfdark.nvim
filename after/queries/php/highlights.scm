@@ -7,7 +7,7 @@
 
 ;; Don't highlight `$this` as Special
 (variable_name
-  (name) @name (#match? @name "^this$")) @halfdark.normal
+  (name) @name (#eq? @name "this")) @halfdark.normal
 ;; Don't highlight `self` in `self::FOO` as Special
 (class_constant_access_expression
-  (relative_scope) @halfdark.normal (#match? @halfdark.normal "^self$"))
+  (relative_scope) @halfdark.normal (#eq? @halfdark.normal "self"))
