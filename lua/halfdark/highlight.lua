@@ -39,6 +39,7 @@ local theme = {
     ["@halfdark.parameter"] = { fg = palette.orange500 },
     ["@halfdark.docComment"] = { bg = palette.black, fg = palette.yellow500 },
     ["@halfdark.normal"] = { link = "Normal" },
+    ["@halfdark.constant"] = { link = "Constant" },
 
     -- BASELINE SYNTAX                            --
     -- Treesitter groups link to these by default --
@@ -97,7 +98,7 @@ local theme = {
     ["@constructor"] = { link = "Normal" },
     ["@function"] = { link = "Normal" },
     ["@function.builtin"] = { link = "Normal" },
-    ["@keyword"] = { fg = palette.grey700 },
+    ["@keyword"] = { link = "Normal" },
     ["@punctuation"] = { link = "@halfdark.punctuation" },
     ["@type"] = { link = "Normal" },
     ["@type.builtin"] = { link = "Normal" },
