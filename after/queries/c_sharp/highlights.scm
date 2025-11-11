@@ -27,6 +27,12 @@
 ; Creating a variable by pattern matching
 (declaration_pattern
   name: (identifier) @halfdark.variableDefinition (#set! priority 150))
+; Creating a variable in a foreach
+(foreach_statement
+  left: (identifier) @halfdark.variableDefinition (#set! priority 150))
+(foreach_statement
+  left: (tuple_pattern
+    name: (identifier) @halfdark.variableDefinition (#set! priority 150)))
 
 (property_declaration
   type: (predefined_type) @halfdark.declarationType (#set! priority 150))
