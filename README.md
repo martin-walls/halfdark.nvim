@@ -9,6 +9,7 @@ Treesitter highlight queries are included for the following languages.
 
 - C#
 - PHP
+- Protobuf
 - TypeScript
 
 ## Themed Plugins
