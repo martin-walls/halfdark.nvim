@@ -33,6 +33,8 @@
 (foreach_statement
   left: (tuple_pattern
     name: (identifier) @halfdark.variableDefinition (#set! priority 150)))
+(catch_declaration
+  name: (identifier) @halfdark.variableDefinition (#set! priority 150))
 
 (property_declaration
   type: (predefined_type) @halfdark.declarationType (#set! priority 150))
