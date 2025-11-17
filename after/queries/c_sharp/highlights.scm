@@ -37,8 +37,8 @@
   name: (identifier) @halfdark.variableDefinition (#set! priority 150))
 
 (property_declaration
-  type: (predefined_type) @halfdark.declarationType (#set! priority 150))
+  type: (predefined_type) @halfdark.normal (#set! priority 150))
 (variable_declaration
-  type: (predefined_type) @halfdark.declarationType (#set! priority 150))
+  type: (predefined_type) @halfdark.normal (#set! priority 150))
 
 ((boolean_literal) @halfdark.constant (#set! priority 150))

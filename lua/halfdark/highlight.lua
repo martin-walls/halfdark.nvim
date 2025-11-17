@@ -34,7 +34,6 @@ local theme = {
     -- Single points of truth for other groups to link to --
     ["@halfdark.definition"] = { fg = palette.blue500 },
     ["@halfdark.variableDefinition"] = { fg = palette.purple700 },
-    ["@halfdark.declarationType"] = { link = "Normal" },
     ["@halfdark.punctuation"] = { fg = palette.grey500 },
     ["@halfdark.parameter"] = { fg = palette.orange500 },
     ["@halfdark.docComment"] = { bg = palette.black, fg = palette.yellow500 },
