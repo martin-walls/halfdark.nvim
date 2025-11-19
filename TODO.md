@@ -1,1 +1,1 @@
-- [ ] document highlighting rules in README
+- [ ] Highlighting selected item in quickfix list
