@@ -150,7 +150,7 @@ local theme = {
     -- Fugitive --
     fugitiveHash = { fg = palette.red500 },
     fugitiveUnstagedModifier = { fg = palette.red500 },
-    fugitiveStagedModifier = { fg = palette.red500 },
+    fugitiveStagedModifier = { fg = palette.green500 },
 
     -- Telescope --
     TelescopeSelection = { bg = palette.bg700 },
