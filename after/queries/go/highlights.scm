@@ -10,3 +10,7 @@
 (short_var_declaration
   left: (expression_list
           (identifier) @halfdark.variableDefinition (#set! priority 150)))
+
+(range_clause
+  left: (expression_list
+          (identifier) @halfdark.variableDefinition (#set! priority 150)))
