@@ -115,6 +115,8 @@ local theme = {
     ["@lsp.type.xmlDocCommentAttributeName"] = { link = "@lsp.type.xmlDocCommentDelimiter" },
     ["@lsp.type.xmlDocCommentAttributeQuotes"] = { link = "@lsp.type.xmlDocCommentDelimiter" },
 
+    ["@lsp.typemod.variable.declaration"] = { link = "@halfdark.variableDefinition" },
+
     -- Diagnostics --
     DiagnosticInfo = { fg = palette.cyan500 },
     DiagnosticOk = { fg = palette.green500 },
@@ -126,7 +128,6 @@ local theme = {
     DiagnosticVirtualTextInfo = { bg = palette.black, fg = palette.cyan500 },
     DiagnosticVirtualTextOk = { bg = palette.black, fg = palette.green500 },
     DiagnosticVirtualTextHint = { bg = palette.black, fg = palette.blue500 },
-    DiagnosticVirtualTextWarn = { bg = palette.black, fg = palette.yellow500 },
     DiagnosticVirtualTextError = { bg = palette.black, fg = palette.red500 },
 
     DiagnosticFloatingInfo = { link = "DiagnosticVirtualTextInfo" },
