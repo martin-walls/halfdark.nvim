@@ -7,6 +7,8 @@
 
 (assignment
   left: (identifier) @halfdark.variableDefinition (#set! priority 150))
+(as_pattern_target
+  (identifier) @halfdark.variableDefinition (#set! priority 150))
 
 ; Don't highlight when we pass named parameters when calling a function
 (keyword_argument
