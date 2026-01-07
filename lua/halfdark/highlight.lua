@@ -91,6 +91,7 @@ local theme = {
     PmenuThumb = { bg = palette.bg600 },
 
     -- Treesitter --
+    ["@attribute.builtin"] = { link = "Normal" },
     ["@comment.documentation"] = { link = "@halfdark.docComment" },
     ["@conceal"] = { link = "Conceal" },
     ["@constant.builtin"] = { link = "Constant" },
@@ -102,6 +103,7 @@ local theme = {
     ["@type"] = { link = "Normal" },
     ["@type.builtin"] = { link = "Normal" },
     ["@variable"] = { link = "Identifier" },
+    ["@variable.builtin"] = { link = "Identifier" },
     ["@variable.parameter"] = { link = "@halfdark.parameter" },
 
     -- LSP --
