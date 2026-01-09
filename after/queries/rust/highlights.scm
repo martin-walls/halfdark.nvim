@@ -8,3 +8,5 @@
 ; Don't highlight start of attribute as "special" punctuation
 (attribute_item
   "#" @halfdark.punctuation (#set! priority 150))
+
+((doc_comment) @halfdark.docComment (#set! priority 150))
