@@ -14,12 +14,7 @@ Highlighting rules:
 
 ## Language Support
 
-Treesitter highlight queries are included for the following languages.
-
-- C#
-- PHP
-- Protobuf
-- TypeScript
+Treesitter highlight queries are included various languages in `after/queries`.
 
 ## Themed Plugins
 
