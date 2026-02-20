@@ -36,6 +36,7 @@ local theme = {
     ["@halfdark.variableDefinition"] = { fg = palette.purple700 },
     ["@halfdark.punctuation"] = { fg = palette.grey500 },
     ["@halfdark.parameter"] = { fg = palette.orange500 },
+    ["@halfdark.comment"] = { link = "Comment" },
     ["@halfdark.docComment"] = { bg = palette.black, fg = palette.yellow500 },
     ["@halfdark.normal"] = { link = "Normal" },
     ["@halfdark.constant"] = { link = "Constant" },
